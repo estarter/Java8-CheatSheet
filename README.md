@@ -1,6 +1,60 @@
 
 # JAVA 8 - Cheat Sheet
 
+## Functional Interfaces
+### Nullary functions
+| function type | Java type |
+|---------------|-----------|
+| () → void     |  java.lang.Runnable   |
+| () → boolean  |  BooleanSupplier   |
+| () → int      |  IntSupplier   |
+| () → long     |  LongSupplier   |
+| () → double   |  DoubleSupplier   |
+| () → A        |  Supplier<A> or java.lang.Callable<A>   |
+
+### Unary functions
+| function type | Java type |
+|---------------|-----------|
+| int → void        | IntConsumer |
+| long → void       | LongConsumer |
+| double → void     | DoubleConsumer |
+| A → void          | Consumer<A> |
+| int → boolean     | IntPredicate |
+| long → boolean    | LongPredicate |
+| double → boolean  | DoublePredicate |
+| A → boolean       | Predicate<A> |
+| int → int         | IntUnaryOperator |
+| long → int        | LongToIntFunction |
+| double → int      | DoubleToIntFunction |
+| A → int           | ToIntFunction<A> |
+| int → long        | IntToLongFunction |
+| long → long       | LongUnaryOperator |
+| double → long     | DoubleToLongFunction |
+| A → long          | ToLongFunction<A> |
+| int → double      | IntToDoubleFunction |
+| long → double     | LongToDoubleFunction |
+| double → double   | DoubleUnaryOperator |
+| A → double        | ToDoubleFunction<A> |
+| A → A             | UnaryOperator<A> |
+| A → B             | Function<A, B> |
+
+### Binary functions
+| function type | Java type |
+|---------------|-----------|
+| (A, int) → void             | ObjIntConsumer<A> |
+| (A, long) → void            | ObjLongConsumer<A> |
+| (A, double) → void          | ObjDoubleConsumer<A> |
+| (A, B) → void               | BiConsumer<A, B> |
+| (A, B) → boolean            | BiPredicate<A, B> |
+| (int, int) → int            | IntBinaryOperator |
+| (long, long) → long         | LongBinaryOperator |
+| (double, double) → double   | DoubleBinaryOperator |
+| (A, A) → A                  | BinaryOperator<A> |
+| (A, B) → int                | ToIntFunction<A, B> |
+| (A, B) → long               | ToLongBiFunction<A, B> |
+| (A, B) → double             | ToDoubleBiFunction<A, B> |
+| (A, B) → C                  | BiFunction<A, B, C> |
+
 ## Lambda Expression
 ```java
 (int a) -> a * 2; // Calculate the double of a
